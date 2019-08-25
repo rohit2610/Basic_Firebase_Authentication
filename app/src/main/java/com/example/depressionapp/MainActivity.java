@@ -42,12 +42,16 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
 
         FirebaseUser user = mAuth.getCurrentUser();
+
         updateUI(user);
     }
 
 
     public void updateUI(FirebaseUser user) {
         if (user != null) {
+
+            Intent intent = new Intent(MainActivity.this,MessageScreen.class);
+            startActivity(intent);
 
         } else {
             Intent intent = new Intent(MainActivity.this, SignUp.class);
@@ -60,7 +64,13 @@ public class MainActivity extends AppCompatActivity {
         int i = view.getId();
 
         if(i == R.id.signUpButton){
+            Intent intent = new Intent(MainActivity.this, SignUp.class);
+            startActivity(intent);
+        }
 
+        else if(i == R.id.logInButton){
+            Intent intent = new Intent(MainActivity.this,LogIn.class);
+            startActivity(intent);
         }
     }
 

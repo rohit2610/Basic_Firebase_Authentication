@@ -48,6 +48,15 @@ public class SignUp extends AppCompatActivity {
             signUp();
         }
 
+        else if(i == R.id.logButton){
+            login();
+        }
+
+    }
+
+    private void login(){
+        Intent intent = new Intent(SignUp.this,LogIn.class);
+        startActivity(intent);
     }
 
 
