@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
 
     private EditText password, username;
 
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void onClick(View view){
+    public void onCLick(View view){
         int i = view.getId();
 
         if(i == R.id.signUpButton){
